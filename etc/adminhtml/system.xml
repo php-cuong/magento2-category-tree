@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 GiaPhuGroup, Ltd. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog">
+            <group id="category_tree" translate="label" type="text" sortOrder="500" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category Tree</label>
+                <field id="id" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Category Name</label>
+                    <comment>When customer orders any product from this category, add related products to the existing order after placing order successfully.</comment>
+                    <source_model>PHPCuong\CategoryTree\Model\Config\Source\CategoryTree</source_model>
+                    <backend_model>PHPCuong\CategoryTree\Model\Config\Source\Backend\CategoryTreeValidation</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
